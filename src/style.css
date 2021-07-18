@@ -1,4 +1,25 @@
-h1 {
-  text-align: center;
+body {
   font-family: arial;
+  display: block;
+  background-image: linear-gradient(rgb(222, 0, 230) 0%, rgb(143, 6, 70) 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+  left: 0px;
+  right: 30px;
+}
+.display-4,
+.display-6 {
+  text-shadow: 2px 2px rgb(158, 152, 152);
+  font-weight: lighter;
+}
+
+.display-4 {
+  text-align: right;
 }

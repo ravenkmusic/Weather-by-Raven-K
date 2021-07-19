@@ -12,12 +12,13 @@
   <body>
     <div class="container">
       <div>
-        <h1 class="display-4">Weather by Raven K</h1>
+        <h1 class="display-3">Weather by Raven K</h1>
       </div>
       <div>
-        <h1 class="display-6" id="time">Current Time</h1>
+        <h1 class="display-6" id="time">Current Time</h1><P>
       </div>
-      <div class="cityfinder"><div class="cityfinder">
+      <h1 class="current-city">Current City</h1><P>
+        <div class="cityfinder"><div class="cityfinder">
         <form id="search-city">
           <input type="text" placeholder="Type in a city..." autocomplete="on" id="city-input">
           <input type="submit" value="Search">
@@ -27,17 +28,37 @@
       <P><hr>
   <div class="weather">
   <div class="row justify-content-md-center">
-    <div class="col col-lg-2">
+    <div class="col-2">
      <h3 class="current weather">Current Weather</h3>
+     <h1 class="display-6">75</h1> 
     </div>
-    <div class="col-md-auto">
+    <div class="col-8">
      <h3 class ="forecast">Five Day Forecast</h3>
+     <div class="row">
+    <div class="col">
+     Tomorrow
     </div>
-    <div class="col col-lg-2">
-      <h3 class="highlow">High & Low</h3>
+    <div class="col">
+      Monday
+    </div>
+    <div class="col">
+      Tuesday
+    </div>
+    <div class="col">
+      Wednesday
+    </div>
+    <div class="col">
+      Thursday
     </div>
   </div>
-</div><hr>This app is coded by <a href="http://ravenkmusic.com/">Raven Hendricks</a>, open sourced on <a href="https://github.com/ravenkmusic/Weather-by-Raven-K">Github</a> and hosted via <a href="https://netlify.com">Netlify</a>.</P>
+     
+    </div>
+    <div class="col-2">
+      <h3 class="highlow">Today's High & Low</h3>
+      <h1 class="display-6">76/54</h1> 
+    </div>
+  </div>
+</div><hr><p class="byline">This app is coded by <a href="http://ravenkmusic.com/">Raven Hendricks</a>, open sourced on <a href="https://github.com/ravenkmusic/Weather-by-Raven-K">Github</a> and hosted via <a href="https://netlify.com">Netlify</a>.</p>
 
     </div>
   </body>

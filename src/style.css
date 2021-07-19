@@ -1,7 +1,7 @@
 body {
   font-family: arial;
   display: block;
-  background: linear-gradient(45deg, #d5a9ff 0%, #8ec5fc 100%);
+  background: linear-gradient(45deg, #d5a9ff 0%, #ca47bf 100%);
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
@@ -14,16 +14,28 @@ body {
   left: 0px;
   right: 30px;
 }
-.display-4,
+.display-3,
 .display-6 {
   text-shadow: 2px 2px rgb(158, 152, 152);
   font-weight: lighter;
 }
 
-.display-4 {
+.display-3 {
   text-align: right;
 }
+.current-city {
+  text-align: center;
+}
+
 .cityfinder {
+  text-align: center;
+}
+
+.weather {
+  text-align: center;
+}
+
+.byline {
   text-align: center;
 }
 

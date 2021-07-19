@@ -1,7 +1,7 @@
 body {
   font-family: arial;
   display: block;
-  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  background: linear-gradient(45deg, #d5a9ff 0%, #8ec5fc 100%);
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
@@ -22,4 +22,11 @@ body {
 
 .display-4 {
   text-align: right;
+}
+.cityfinder {
+  text-align: center;
+}
+
+h3 {
+  text-shadow: 2px 2px rgb(158, 152, 152);
 }

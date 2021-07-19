@@ -1,7 +1,7 @@
 body {
   font-family: arial;
   display: block;
-  background-image: linear-gradient(rgb(222, 0, 230) 0%, rgb(143, 6, 70) 100%);
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
   background-attachment: fixed;
   background-repeat: no-repeat;
 }

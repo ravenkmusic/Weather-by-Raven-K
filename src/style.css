@@ -1,34 +1,64 @@
 body {
   font-family: arial;
-  display: block;
-  background: linear-gradient(45deg, #d5a9ff 0%, #ca47bf 100%);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  background: radial-gradient(
+    circle,
+    rgb(228, 192, 146) 0%,
+    rgb(34, 80, 117) 100%
+  );
 }
 
-.container {
+.overall {
   display: block;
   margin: 0 auto;
   position: relative;
-  top: 20px;
-  left: 0px;
-  right: 30px;
+  top: 60px;
+  width: 1200px;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(74, 101, 130, 1) 100%
+  );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  border-radius: 10px;
 }
-.display-3,
+
+.header {
+  position: relative;
+  top: 20px;
+}
+
+.container {
+  border-radius: 10px;
+  border-width: 30px;
+}
+.display-4,
 .display-6 {
   text-shadow: 2px 2px rgb(158, 152, 152);
   font-weight: lighter;
 }
 
-.display-3 {
+.display-4 {
   text-align: right;
+  position: relative;
+  right: 50px;
+}
+
+#time {
+  position: relative;
+  left: 50px;
+  top: 10px;
+  text-align: left;
 }
 .current-city {
+  text-shadow: 2px 2px rgb(158, 152, 152);
   text-align: center;
+  padding: 10px;
 }
 
 .cityfinder {
   text-align: center;
+  padding: 10px;
 }
 
 .weather {
@@ -37,6 +67,7 @@ body {
 
 .byline {
   text-align: center;
+  padding-bottom: 20px;
 }
 
 h3 {

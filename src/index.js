@@ -91,11 +91,20 @@ function showTemp(response) {
   );
   icon.setAttribute("alt", response.data.weather[0].description);
 }
+function search(city) {
+  let apiKey = "c789e765c19e78f4b69ede7112f55431";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(showTemp);
+}
 
-let apiKey = "c789e765c19e78f4b69ede7112f55431";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=imperial`;
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityName = document.querySelector("#city-input");
+  search(cityName.value);
+  console.log(cityName.value);
+}
 
-axios.get(apiUrl).then(showTemp);
+search("Baltimore");
 
 let form = document.querySelector("#search-city");
-form.addEventListener("submit", searchCity);
+form.addEventListener("submit", handleSubmit);

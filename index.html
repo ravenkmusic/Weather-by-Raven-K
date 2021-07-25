@@ -7,6 +7,8 @@
     <title>Weather by Raven K</title>
     <link rel="stylesheet" href="src/style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 
   </head>
   <body>
@@ -17,10 +19,10 @@
        
     <div class="overall">
      <div>
-        <h1 class="display-6" id="time">Current Time</h1><P>
+        <h1 class="display-6" id="time"></h1><P>
         </div>
       <div class="container">
-      <h1 class="current-city">Current City</h1><P>
+      <h1 class="current-city" id="currentcity"></h1><P>
         <div class="cityfinder">
         <form id="search-city">
           <input type="text" placeholder="Type in a city..." autocomplete="on" id="city-input">
@@ -32,7 +34,11 @@
   <div class="row justify-content-md-center">
     <div class="col-2">
      <h3 class="current weather">Current Weather</h3>
-     <h1 class="display-6">75</h1> 
+     <h1 class="display-6" id ="currentweather"></h1><h1 class="display-6">°F</h1>
+     <ul><li>Description: <span id="description"></li>
+     <li>Wind Speed: <span id="windspeed"></li>
+     <li>Precipitation: <span id ="precipitation"></li></ul>
+     
     </div>
     <div class="col-8">
      <h3 class ="forecast">Five Day Forecast</h3>
@@ -57,7 +63,7 @@
     </div>
     <div class="col-2">
       <h3 class="highlow">Today's High & Low</h3>
-      <h1 class="display-6">76/54</h1>
+      <span class="high" id="high"></span><span class="high">°F/</span><span class="low" id= "low"></span><span class="low">°F</span>
     </div>
   </div>
   </div>

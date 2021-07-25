@@ -18,26 +18,36 @@
       </div></div>
        
     <div class="overall">
-     <div>
+      <div>
         <h1 class="display-6" id="time"></h1><P>
         </div>
+       <P>
+        
       <div class="container">
-      <h1 class="current-city" id="currentcity"></h1><P>
-        <div class="cityfinder">
-        <form id="search-city">
-          <input type="text" placeholder="Type in a city..." autocomplete="on" id="city-input">
-          <input type="submit" value="Search">
+      <h1 class="current-city" id="currentcity"></h1>
+              <div class="cityfinder">
+        <form class="search" id="search-city">
+          <div class="row justify-content-md-center">
+            <div class="col-3">
+          <input type="text" placeholder="Type in a city..." class= "form-control" autocomplete="on" id="city-input">
+          </div>
+          <input type="submit" value="Search" class ="btn btn-light">
+          </div>
         </form>
       </div>
-      <P><hr>
+      <span class="conditions">
+        <ul><img src= "" class ="float-right" alt ="" id="icon">
+          <li><span id="description"></li>
+        <li>Wind Speed: <span id="windspeed"></span> MPH</li>
+          <li>Precipitation: <span id ="precipitation"></li></ul>
+          </span> 
+      <hr>
   <div class="weather">
   <div class="row justify-content-md-center">
     <div class="col-2">
      <h3 class="current weather">Current Weather</h3>
-     <h1 class="display-6" id ="currentweather"></h1><h1 class="display-6">°F</h1>
-     <ul><li>Description: <span id="description"></li>
-     <li>Wind Speed: <span id="windspeed"></li>
-     <li>Precipitation: <span id ="precipitation"></li></ul>
+     <span class="currentweather" id ="currentweather"></span><span class="units">°F</span>
+     
      
     </div>
     <div class="col-8">
@@ -63,7 +73,7 @@
     </div>
     <div class="col-2">
       <h3 class="highlow">Today's High & Low</h3>
-      <span class="high" id="high"></span><span class="high">°F/</span><span class="low" id= "low"></span><span class="low">°F</span>
+      <span class="high" id="high"></span><span class="units">°F / </span><span class="low" id= "low"></span><span class="units">°F</span>
     </div>
   </div>
   </div>

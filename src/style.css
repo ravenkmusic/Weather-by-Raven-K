@@ -81,6 +81,16 @@ ul {
   padding: 10px;
 }
 
+#current-celsius,
+#current-fahr {
+  color:rgb(34, 80, 117)
+  text-shadow: 2px 2px rgb(158, 152, 152);
+}
+
+#current-celsius:hover,
+#current-fahr:hover {
+  text-decoration: none;
+}
 li {
   text-align: right;
   text-transform: capitalize;

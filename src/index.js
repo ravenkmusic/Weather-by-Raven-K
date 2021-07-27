@@ -59,6 +59,13 @@ function currentTime() {
 let time = document.querySelector("#time");
 time.innerHTML = currentTime(now);
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = `c789e765c19e78f4b69ede7112f55431`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&unit=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function showTemp(response) {
   console.log(response.data);
 
@@ -97,6 +104,8 @@ function showTemp(response) {
     `http://openweathermap.org/img/wn/${iconImage}@2x.png`
   );
   icon.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 function search(city) {
   let apiKey = "c789e765c19e78f4b69ede7112f55431";

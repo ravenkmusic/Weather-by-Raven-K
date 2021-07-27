@@ -47,9 +47,6 @@ ul {
   position: relative;
   right: 50px;
 }
-.day{
-  text-align: left;
-}
 
 #time {
   position: relative;
@@ -61,7 +58,8 @@ ul {
 .high,
 .low,
 .currentweather,
-.units {
+.units,
+.day {
   text-shadow: 2px 2px rgb(158, 152, 152);
   text-align: center;
 }

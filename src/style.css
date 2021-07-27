@@ -16,7 +16,7 @@ ul {
   margin: 0 auto;
   position: relative;
   top: 23px;
-  width: 1200px;
+  width: 700px;
   background: radial-gradient(
     circle,
     rgba(238, 174, 202, 1) 0%,
@@ -47,12 +47,14 @@ ul {
   position: relative;
   right: 50px;
 }
+.day{
+  text-align: left;
+}
 
 #time {
   position: relative;
-  left: 50px;
   top: 10px;
-  text-align: left;
+  text-align: center;
 }
 
 .current-city,
@@ -72,7 +74,7 @@ ul {
 .low,
 .currentweather,
 .units {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: thinner;
 }
 .cityfinder {
@@ -105,6 +107,7 @@ li {
   padding-bottom: 20px;
 }
 
-h3 {
+h4 {
   text-shadow: 2px 2px rgb(158, 152, 152);
+  text-align: center;
 }

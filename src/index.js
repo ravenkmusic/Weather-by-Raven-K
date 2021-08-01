@@ -62,7 +62,7 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.daily;
 
-  let forecastHTML = `<h4 class="five-day-forecast">5-Day Forecast</h4><div class="row">`;
+  let forecastHTML = `<h4 class="five-day-forecast">5-Day Forecast (°C)</h4><div class="row">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6 && index > 0) {
       forecastHTML =
@@ -173,6 +173,22 @@ function displayCelsius(event) {
   highTemperature.innerHTML = Math.round(celsiusHighTemp);
 }
 
+function exactButton(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(exactLocation);
+}
+
+function exactLocation(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiKey = "c789e765c19e78f4b69ede7112f55431";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(showTemp);
+}
+
+let exact = document.querySelector("#exact-button");
+exact.addEventListener("click", exactButton);
+
 let celsiusTemp = null;
 let celsiusLowTemp = null;
 let celsiusHighTemp = null;
@@ -186,4 +202,4 @@ currentFahr.addEventListener("click", displayFahr);
 let currentCels = document.querySelector("#current-celsius", "#high-low-fahr");
 currentCels.addEventListener("click", displayCelsius);
 
-search("Baltimore");
+search("New York");

@@ -59,7 +59,9 @@ ul {
 .low,
 .currentweather,
 .units,
-.day {
+.day,
+.weather-forecast-temperature-min,
+.weather-forecast-temperature-max {
   text-shadow: 2px 2px rgb(158, 152, 152);
   text-align: center;
 }

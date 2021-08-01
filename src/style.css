@@ -59,11 +59,15 @@ ul {
 .low,
 .currentweather,
 .units,
-.day,
 .weather-forecast-temperature-min,
 .weather-forecast-temperature-max {
   text-shadow: 2px 2px rgb(158, 152, 152);
   text-align: center;
+}
+
+.weather-forecast-temperature-min,
+.low {
+  color: #474747;
 }
 .current-city {
   padding: 5px;
@@ -84,13 +88,23 @@ ul {
 }
 
 #current-celsius,
+#current-fahr,
+#name,
+#source,
+#host {
+  color: rgb(134, 91, 110);
+}
+
+#current-celsius,
 #current-fahr {
-  color:rgb(34, 80, 117)
   text-shadow: 2px 2px rgb(158, 152, 152);
 }
 
 #current-celsius:hover,
-#current-fahr:hover {
+#current-fahr:hover,
+#name:hover,
+#source:hover,
+#host:hover {
   text-decoration: none;
 }
 li {

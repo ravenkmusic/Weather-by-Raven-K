@@ -1,5 +1,4 @@
 let now = new Date();
-console.log(now);
 
 function currentTime() {
   let weekDay = [
@@ -11,7 +10,6 @@ function currentTime() {
     "Friday",
     "Saturday",
   ];
-  console.log(weekDay);
 
   let monthsOfTheYear = [
     "January",
@@ -27,31 +25,24 @@ function currentTime() {
     "November",
     "December",
   ];
-  console.log(monthsOfTheYear);
 
   let month = monthsOfTheYear[now.getMonth()];
-  console.log(month);
 
   let date = now.getDate();
-  console.log(date);
 
   let year = now.getFullYear();
-  console.log(year);
 
   let day = weekDay[now.getDay()];
-  console.log(day);
 
   let hour = now.getHours();
   if (hour < 10) {
     hour = ` 0${hour}`;
   }
-  console.log(hour);
 
   let minutes = now.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  console.log(minutes);
 
   return `${day}, ${month} ${date}, ${year} at ${hour}:${minutes}`;
 }
@@ -101,7 +92,6 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = `c789e765c19e78f4b69ede7112f55431`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
 
@@ -109,8 +99,6 @@ function getForecast(coordinates) {
 }
 
 function showTemp(response) {
-  console.log(response.data);
-
   let city = document.querySelector("#currentcity");
   city.innerHTML = response.data.name;
 
@@ -118,11 +106,8 @@ function showTemp(response) {
   weatherCondition.innerHTML = response.data.weather[0].description;
 
   celsiusTemp = response.data.main.temp;
-  console.log(celsiusTemp);
   celsiusHighTemp = response.data.main.temp_max;
-  console.log(celsiusHighTemp);
   celsiusLowTemp = response.data.main.temp_min;
-  console.log(celsiusLowTemp);
 
   let temperature = document.querySelector("#currentweather");
   temperature.innerHTML = Math.round(celsiusTemp);
@@ -159,7 +144,6 @@ function handleSubmit(event) {
   event.preventDefault();
   let cityName = document.querySelector("#city-input");
   search(cityName.value);
-  console.log(cityName.value);
 }
 
 function displayFahr(event) {
@@ -167,24 +151,20 @@ function displayFahr(event) {
   let currentTemperature = document.querySelector("#currentweather");
   let fahrTemp = (celsiusTemp * 9) / 5 + 32;
   currentTemperature.innerHTML = Math.round(fahrTemp);
-  console.log(fahrTemp);
 
   let lowTemperature = document.querySelector("#low");
   let lowFahrTemp = (celsiusLowTemp * 9) / 5 + 32;
   lowTemperature.innerHTML = Math.round(lowFahrTemp);
-  console.log(lowFahrTemp);
 
   let highTemperature = document.querySelector("#high");
   let highFahrTemp = (celsiusHighTemp * 9) / 5 + 32;
   highTemperature.innerHTML = Math.round(highFahrTemp);
-  console.log(highFahrTemp);
 }
 
 function displayCelsius(event) {
   event.preventDefault();
   let currentTemperature = document.querySelector("#currentweather");
   currentTemperature.innerHTML = Math.round(celsiusTemp);
-  console.log(currentTemperature);
 
   let lowTemperature = document.querySelector("#low");
   lowTemperature.innerHTML = Math.round(celsiusLowTemp);

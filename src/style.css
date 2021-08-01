@@ -107,6 +107,12 @@ ul {
 #host:hover {
   text-decoration: none;
 }
+
+#exact-button {
+  text-align: center;
+  display:block;
+}
+
 li {
   text-align: right;
   text-transform: capitalize;
